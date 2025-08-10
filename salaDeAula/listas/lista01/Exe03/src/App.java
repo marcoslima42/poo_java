@@ -9,16 +9,16 @@ public class App {
         int num = s.nextInt(), i=2;
         boolean primo = true;
 
-        while(i <= num){
+        while(i*i <= num){
 
-            if(num%i != 0){
+            if(num%i == 0){
                 primo = false;
                 break;
             }
             i++;
         }
 
-        if(primo)
+        if(primo && num > 1)
             System.out.println("Seu número é primo!");
         else
             System.out.println("Seu número não é primo!");
