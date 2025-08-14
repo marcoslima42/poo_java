@@ -1,10 +1,12 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
-public class crivo {
+public class App {
     
     public static void main(String[] args) throws Exception {
-        int n = 100;
-        n++;
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+
         int primos[] = new int[n];
 
         Arrays.fill(primos, -1);
@@ -25,6 +27,7 @@ public class crivo {
             if(primos[i] != 0)
                 System.out.print(i + " ");
         }
+        s.close();
     }
 
 }
