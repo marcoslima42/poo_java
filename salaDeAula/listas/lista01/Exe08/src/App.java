@@ -20,14 +20,11 @@ import java.util.Scanner;
 public class App {
 
     public static Boolean crescente(int[] numbers){
-        int aux = numbers[0];
         Boolean crescente = true; 
 
-        for(int i=1; i<numbers.length-1; i++){
-            if(aux > numbers[i]){
-                crescente = false;
-                aux = i;
-            }
+        for(int i=0; i<numbers.length-1; i++){
+            if(numbers[i] > numbers[i+1])
+                return false;
         }
         return crescente;
     }
@@ -85,11 +82,13 @@ public class App {
         System.out.println();
 
         //F
-        int media = 0;
+        double media = 0;
+        int count=0;
         for(int aux: numbers){
+            count++;
             media += aux;
         }
-        System.out.println("A média do vetor é: " + media);
+        System.out.println("A média do vetor é: " + (media/count));
 
         //G
         int maior = numbers[0];
@@ -99,7 +98,7 @@ public class App {
         }
         System.out.println("O maior número é " + maior);
         
-        int menor = numbers[15]; 
+        int menor = numbers[0]; 
         for(int aux : numbers){
             if(menor > aux)
                 menor = aux;
@@ -157,7 +156,7 @@ public class App {
             System.out.println("Seu número não foi encontrado!");
 
         //N
-        int vetando[] = {1, 0, 3, 4, 5};
+        int vetando[] = {1, 2, 1, 4, 5};
 
         System.out.println("Vetor crescente?");
         if(crescente(vetando))

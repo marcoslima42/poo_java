@@ -10,7 +10,7 @@ public class App {
         
         inverso.reverse();
 
-        if((nome.toString()).equals(inverso.toString()))
+        if((nome.toString()).equalsIgnoreCase(inverso.toString()))
             System.out.println("É palindromo :) ");
         else
             System.out.println("Não é palindromo :( ");
