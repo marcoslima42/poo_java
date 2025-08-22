@@ -84,7 +84,7 @@ public class App {
         //F
         double media = 0;
         int count=0;
-        for(int aux: numbers){
+        for(int aux : numbers){
             count++;
             media += aux;
         }
