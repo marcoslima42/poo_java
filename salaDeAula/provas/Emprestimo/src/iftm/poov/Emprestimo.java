@@ -7,8 +7,8 @@ public class Emprestimo {
     private String item;
     private String nomePessoa;
     private LocalDate dataEmprestimo;
-    private LocalDate dataDevolucao = null;
-    private boolean devolvido = false;
+    private LocalDate dataDevolucao;
+    private boolean devolvido;
     
     //construtor
     
@@ -63,16 +63,16 @@ public class Emprestimo {
 
     //metodos
 
-    public void finalizar(){
+    public void finalizar(LocalDate dataDevolucao){
         this.devolvido = true;
-        this.dataDevolucao = LocalDate.now();
+        this.dataDevolucao = dataDevolucao;
     }
-
-    public int diasEmprestado(){
+    //.until
+    public long diasEmprestado(){
         if(this.dataDevolucao != null)
-            return this.dataDevolucao.getDayOfMonth() - this.dataEmprestimo.getDayOfMonth();
+            return dataEmprestimo.until(LocalDate.now(), ChronoUnit.DAYS);
         else 
-            return (int) ChronoUnit.DAYS.between(this.dataEmprestimo, LocalDate.now());
+            return dataEmprestimo.until(this.dataDevolucao, ChronoUnit.DAYS);
     }
 
     @Override

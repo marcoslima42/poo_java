@@ -42,7 +42,7 @@ public class App {
         }while(true);
 
         if(!listaEmprestimo.isEmpty()){
-            listaEmprestimo.get(0).finalizar();
+            listaEmprestimo.get(0).finalizar(LocalDate.now());
         }
         int countNDevolvidos = 0;
         for(Emprestimo elem : listaEmprestimo){
@@ -55,7 +55,7 @@ public class App {
 
         for(Emprestimo elem : listaEmprestimo){
             if(!elem.isDevolvido()){
-                System.out.println(elem.toString()); 
+                System.out.println(elem); 
                 System.out.println("Emprestado a " +  elem.diasEmprestado() + " dias");
                 System.out.println("\n\n\n");
             }
