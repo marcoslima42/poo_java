@@ -2,7 +2,7 @@ package iftm.poov;
 
 import java.math.BigDecimal;
 
-public class Automovel {
+public abstract class Automovel {
 
     private String modelo;
     private String cor;
@@ -65,6 +65,13 @@ public class Automovel {
     public String getCombustivel(){
         return descricao.getDescricao();
     }
+
+    @Override
+    public String toString() {
+        return "Automovel [modelo=" + modelo + ", cor=" + cor + ", descricao=" + descricao + "]";
+    }
+
+    
 }
 
 

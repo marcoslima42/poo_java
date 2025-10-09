@@ -11,6 +11,6 @@ public class App {
         // for(var elemento : Combustivel.values())
         //     if ("gasolina".equalsIgnoreCase(elemento.getDescricao()))
         //         System.out.println(elemento.ordinal() + ") " + elemento);
-
+        AutomovelBasico a = new Automovel;
     }
 }
