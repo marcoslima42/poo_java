@@ -34,4 +34,8 @@ public class Aluno {
     public void adicionarProfessor(Professor prof){   
         professores.add(prof);
     }
+
+    public void mostrarProfessores(){
+        System.out.println(professores);
+    }
 }

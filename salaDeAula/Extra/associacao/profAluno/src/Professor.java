@@ -36,8 +36,11 @@ public class Professor {
         return "Professor [codigo=" + codigo + ", nome=" + nome + "]";
     }
 
+    public void adicionarAluno(Aluno novo){   
+        alunos.add(novo);
+    }
 
-    public void adicionarAluno(Aluno al){   
-        alunos.add(al);
+    public void mostrarAlunos(){
+        System.out.println(alunos);
     }
 }
