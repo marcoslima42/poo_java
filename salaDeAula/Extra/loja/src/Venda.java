@@ -10,7 +10,6 @@ public class Venda {
     private BigDecimal valor;
     private Cliente cliente;
     private ArrayList <Item> itens = new ArrayList<>();
-        
 
     public Venda(long codigo, LocalDate data, LocalTime hora, BigDecimal valor, Cliente cliente) {
         this.codigo = codigo;
@@ -93,6 +92,9 @@ public class Venda {
     }
 
 
+    public void addItem(Item novo){
+        itens.add(novo);
+    }
 
     @Override
     public String toString() {
