@@ -12,6 +12,18 @@ public class Doacao {
     private Doador doador;
     
     
+    public Doacao(Long codigo, LocalDate data, LocalTime hora, double volume, Situacao situacao, Doador doador) {
+        this.codigo = codigo;
+        this.data = data;
+        this.hora = hora;
+        this.volume = volume;
+        this.situacao = situacao;
+        this.doador = doador;
+    }
+
+    public Doacao(){
+        
+    }
     public Long getCodigo() {
         return codigo;
     }

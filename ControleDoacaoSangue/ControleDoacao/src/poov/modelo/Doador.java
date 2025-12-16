@@ -10,6 +10,21 @@ public class Doador {
     private TipoSanguineo tipoSanguineo;
     private RH rh;
 
+    public Doador(Long codigo, String nome, String cpf, String contato, Boolean tipoERhCorretos, Situacao situacao,
+            TipoSanguineo tipoSanguineo, RH rh) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.contato = contato;
+        this.tipoERhCorretos = tipoERhCorretos;
+        this.situacao = situacao;
+        this.tipoSanguineo = tipoSanguineo;
+        this.rh = rh;
+    }
+    
+    public Doador(){
+
+    }
     public Long getCodigo() {
         return codigo;
     }

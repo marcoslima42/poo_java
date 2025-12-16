@@ -11,7 +11,7 @@ public class ConexaoFactory {
     private static String caminho = "jdbc:postgresql";
     private static String host = "localhost";
     private static String porta = "5432";
-    private static String bd = "poov";
+    private static String bd = "postgres";
     private static String login = "postgres";
     private static String senha = "12345";
     private static String url = caminho + "://" + host + ":" + porta + "/" + bd;
@@ -26,7 +26,7 @@ public class ConexaoFactory {
             //System.out.println("Conectando com o banco de dados...");
             Class.forName(classeDriver);
             conexao = DriverManager.getConnection(url, login, senha);
-            System.out.println("Conexão com o banco de dados estabelecida.");
+            //System.out.println("Conexão com o banco de dados estabelecida.");
         } catch (ClassNotFoundException ex) {
             System.out.println("Erro ao carregar o driver JDBC.");
         } catch (SQLException ex){
